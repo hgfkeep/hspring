@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans SYSTEM "beans.dtd">
+<beans>
+    <scan package="win.hgfdodo.hspring.test.annotation"></scan>
+    <aspect ref="author">
+        <before method="before" pointcut="win.hgfdodo.hspring.test.annotation.Book.getAuthor"></before>
+    </aspect>
+
+</beans>

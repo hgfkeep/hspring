@@ -1,0 +1,25 @@
+<!ELEMENT beans (scan?, bean*, aspect* )>
+
+<!ELEMENT bean (property*)>
+<!ATTLIST bean id ID #REQUIRED>
+<!ATTLIST bean name CDATA #IMPLIED>
+<!ATTLIST bean class CDATA #REQUIRED>
+
+<!ELEMENT scan EMPTY>
+<!ATTLIST scan package CDATA #REQUIRED>
+
+<!ELEMENT property EMPTY>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #IMPLIED>
+<!ATTLIST property ref IDREF #IMPLIED>
+
+<!ELEMENT aspect (before?, after?)>
+<!ATTLIST aspect ref CDATA #REQUIRED>
+
+<!ELEMENT before EMPTY>
+<!ATTLIST before method CDATA #REQUIRED>
+<!ATTLIST before pointcut CDATA #REQUIRED>
+
+<!ELEMENT after EMPTY>
+<!ATTLIST after method CDATA #REQUIRED>
+<!ATTLIST after pointcut CDATA #REQUIRED>
